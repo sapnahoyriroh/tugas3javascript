@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hide and Show Image on Click</title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="js/script.js"></script>
+<body>
+    
+        <div id="clickme1">
+            <h2 id="tulisan1">Gambar 1</h2>
+            <img id="halaman" src="gambar/OIP (1).jpeg" alt="" height="150">
+        </div>
+        <div id="clickme2" class="col-12">
+            <h2 id="tulisan2">Gambar 2</h2>
+            <img id="halaman1" src="gambar/OIP (2).jpeg" alt="" height="150">
+        </div>
+        <div id="clickme3">
+            <h2 id="tulisan3">Gambar 3</h2>
+            <img id="halaman2" src="gambar/web-development-development-java-logo-wallpaper.jpg" alt="" height="150">
+        </div>
+</body>
+		<script>
+			$("#clickme1").click(function () {
+				$("#tulisan1").hide("slow", function () {
+				});
+				$("#halaman").hide("slow", function () {
+					alert("Gambar Telah Di Hide.");
+				});
+			});
+			$("#clickme2").click(function () {
+				$("#tulisan2").hide("slow", function () {
+				});
+				$("#halaman1").hide("slow", function () {
+					alert("Gambar Telah Di Hide.");
+				});
+			});
+			$("#clickme3").click(function () {
+				$("#tulisan3").hide("slow", function () {
+				});
+				$("#halaman2").hide("slow", function () {
+					alert("Gambar Telah Di Hide.");
+				});
+			});
+		</script>
+</body>
+</html>

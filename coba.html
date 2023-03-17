@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html
+
+public class Kalkulator {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int rows = 4;
+    int cols = 3;
+
+    // Membuat array dua dimensi untuk tabel
+    String[][] table = new String[rows][cols];
+
+    // Mengisi array dengan data
+    table[0][0] = "Angka 1";
+    table[0][1] = "Operator";
+    table[0][2] = "Angka 2";
+    table[1][0] = "";
+    table[1][1] = "";
+    table[1][2] = "";
+    table[2][0] = "Hasil";
+    table[2][1] = "";
+    table[2][2] = "";
+    table[3][0] = "";
+    table[3][1] = "";
+    table[3][2] = "";
+
+    // Menampilkan tabel awal
+    for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < cols; j++) {
+        System.out.print(table[i][j] + "\t");
+      }
+      System.out.println();
+    }
+
+    // Meminta input dari pengguna
+    System.out.print("Masukkan angka 1: ");
+    int angka1 = input.nextInt();
+    System.out.print("Masukkan operator (+, -, *, /): ");
+    char operator = input.next().charAt(0);
+    System.out.print("Masukkan angka 2: ");
+    int angka2 = input.nextInt();
+
+    // Lakukan operasi
+    int hasil = 0;
+    switch (operator) {
+      case '+':
+        hasil = angka1 + angka2;
+        break;
+      case '-':
+        hasil = angka1 - angka2;
+        break;
+      case '*':
+        hasil = angka1 * angka2;
+        break;
+      case '/':
+        hasil = angka1 / angka2;
+        break;
+      default:
+        System.out.println("Operator tidak valid");
+    }
+
+    // Menampilkan hasil pada tabel
+    table[1][0] = Integer.toString(angka1);
+    table[1][1] = Character.toString(operator);
+    table[1][2] = Integer.toString(angka2);
+    table[2][1] = "=";
+    table[2][2] = Integer.toString(hasil);
+
+    // Menampilkan tabel akhir
+    for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < cols; j++) {
+        System.out.print(table[i][j] + "\t");
+      }
+      System.out.println();
+    }
+  }
+}

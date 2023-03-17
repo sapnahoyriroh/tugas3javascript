@@ -1,0 +1,103 @@
+<script>
+    //array of object
+    // atau array didalam array
+    // atau arraya yang menyimpan array
+
+    let p1 = {nama:"sapna", nilai:80};
+    let p2 = {nama:"rehan", nilai:81};
+    let p3 = {nama:"yoga", nilai:82};
+    let p4 = {nama:"renal", nilai:83};
+    let p5 = {nama:"devii", nilai:50};
+
+    let person = [p1,p2,p3,p4,p5];
+</script>
+<h3>
+    <table style="padding: 10; text-align: center; width: 100%;">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                var no = 1;
+                for (p of person){
+                   let ket = (p.nilai >= 60)? "Lulus" : "Gagal";
+
+                   //set grade A - E (menggunakan if multi kondisi)
+                   // A = 90 - 100, B 80 - 89 dan seterusnya sampai E
+
+                   //set predikat (menggunakan swtich case)
+
+                   //A = Sangat baik, B = Baik, C = Cukup, D= Kurang, E = SAngat kurang
+                   //set warna warni table menggunakan looping
+                   
+                    document.write(`<tr bgcolor="">
+                <td>${no++}</td>
+                <td>${p.nama}</td>
+                <td>${p.nilai}</td>
+                <td>${ket}</td>
+            </tr>`);
+        }
+        </script>
+        </tbody>
+        <script> 
+            //array of object 
+            // array di dalam array 
+            let p1 = {nama:"sapna",nilai:91}; 
+            let p2 = {nama:"rehan",nilai:81}; 
+            let p3 = {nama:"yoga",nilai:71}; 
+            let p4 = {nama:"renal",nilai:83}; 
+            let p5 = {nama:"devii",nilai:60}; 
+         
+            let person = [p1,p2,p3,p4,p5]; 
+        </script> 
+        <h3> 
+            <table style="padding: 10; text-align: center; width: 100%;"> 
+                <thead> 
+                    <tr> 
+                        <th></th> 
+                        <th>Nama</th> 
+                        <th>Nilai</th> 
+                        <th>Grade</th> 
+                        <th>Predikat</th> 
+                    </tr> 
+                </thead> 
+                <tbody> 
+                    <script> 
+                        for(p of person){ 
+                            if(p.nilai >= 90) grade = "A" 
+                            else if(p.nilai >= 80) grade = "B" 
+                            else if(p.nilai >= 70) grade = "C" 
+                            else if(p.nilai >= 60) grade = "D" 
+                            else if(p.nilai >= 50) grade = "E" 
+                            else grade = "F"; 
+                             
+                            switch(grade){ 
+                            case "A" : predikat = "Sangat Baik"; break; 
+                            case "B" : predikat = "Baik"; break; 
+                            case "C" : predikat = "Cukup"; break; 
+                            case "D" : predikat = "Kurang"; break; 
+                            case "E" : predikat = "Sangat Kurang"; break; 
+                            default : predikat = ""; break; 
+                            } 
+                            for(no=1; no <=2; no++){ 
+                            warna = (no % 2 ==0) ? 'red' : 'blue' ; 
+                            document.write(`<tr bgcolor="${ warna }"> 
+                                <td>${no}</td> 
+                                <td>${p.nama}</td> 
+                                <td>${p.nilai}</td> 
+                                <td>${grade}</td> 
+                                <td>${predikat}</td> 
+                            </tr>`) 
+                        } 
+                    }        
+                </script> 
+                </tbody> 
+            </table> 
+        </h3>
+        
+    </table>
+</h3>
